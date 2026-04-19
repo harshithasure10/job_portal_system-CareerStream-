@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Career Stream</title>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/styles.css}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="ISO-8859-1">
+</head>
+<body class="background">
+<!--<nav class="main_div">-->
+<!--    <div class="logo_left">-->
+<!--        <label class="logo">-->
+<!--            Career Stream-->
+<!--        </label>-->
+<!--        <label class="logo_com">-->
+<!--            .com-->
+<!--        </label>-->
+<!--    </div>-->
+<!--    <div class="logo_right">-->
+<!--        <label class="Candidate_login_btn">-->
+<!--            <a th:href="@{/login}">-->
+<!--                Job Candidate Login-->
+<!--            </a>-->
+<!--            <a th:href="@{/register}">-->
+<!--                /Register-->
+<!--            </a>-->
+<!--        </label>-->
+<!--        <label class="Recruiter_login_btn">-->
+<!--            <a th:href="@{/login}">-->
+<!--                Recruiter Login-->
+<!--            </a>-->
+<!--            <a th:href="@{/register}">-->
+<!--                /Register-->
+<!--            </a>-->
+
+<!--        </label>-->
+<!--    </div>-->
+<!--</nav>-->
+
+<nav class="main_div">
+    <div class="logo_left">
+        <label class="logo">Career Stream</label>
+        <label class="logo_com">.com</label>
+    </div>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+
+    <div class="logo_right">
+        <a th:href="@{/login}" class="btn-login me-3">Login</a>
+        <a th:href="@{/register}" class="btn-register">Register</a>
+    </div>
+</nav>
+
+
+
+<div class="container text-center" style="margin-top: 15vh;">
+    <h1 style="color: white; font-weight: 800; font-size: 3.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);" class="heading_font mb-3">
+        Find Your Next Career Move
+    </h1>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.25rem; margin-bottom: 3rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.3);">
+        Connecting talented individuals with the best opportunities.
+    </p>
+
+    <form th:action="@{/global-search/}" style="max-width: 900px; margin: 0 auto;">
+        <div class="inner shadow-lg" style="background-color: rgba(255, 255, 255, 0.95); padding: 10px; border-radius: 15px;">
+            <input type="text" class="form-control border-0 radius-left" 
+                   style="height: 60px; font-size: 1.1rem; border-right: 1px solid #eee !important;" 
+                   placeholder="Job title, keywords, or company" name="job" th:value="${job}"/>
+            <input type="text" class="form-control border-0" 
+                   style="height: 60px; font-size: 1.1rem;" 
+                   placeholder="Location" name="location" th:value="${location}"/>
+            <button type="submit" class="radius-right" style="background-color: #54a0ff; width: 80px; transition: all 0.3s ease; border: none;">
+                <i class="fas fa-search" style="color: white; font-size: 1.5rem;"></i>
+            </button>
+        </div>
+    </form>
+    
+    <div class="mt-5 pt-4">
+        <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem;">Trusted by industry leaders</p>
+        <div class="d-flex justify-content-center align-items-center gap-5" style="color: rgba(255,255,255,0.5); font-size: 2rem;">
+            <i class="fab fa-google"></i>
+            <i class="fab fa-microsoft"></i>
+            <i class="fab fa-amazon"></i>
+            <i class="fab fa-apple"></i>
+            <i class="fab fa-meta"></i>
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #f8f9fa; padding: 80px 0; margin-top: 25vh;">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 style="color: #2d3436; font-weight: 700;" class="heading_font">How CareerStream Works</h2>
+                <p class="text-muted">Three simple steps to your new job</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="p-4 shadow-sm bg-white rounded-3 h-100">
+                    <i class="fas fa-user-plus mb-3" style="font-size: 2.5rem; color: #54a0ff;"></i>
+                    <h4>Create Account</h4>
+                    <p class="text-muted" style="color: #636e72;">Register as a candidate or recruiter and build your professional presence.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="p-4 shadow-sm bg-white rounded-3 h-100">
+                    <i class="fas fa-search-dollar mb-3" style="font-size: 2.5rem; color: #54a0ff;"></i>
+                    <h4>Search & Apply</h4>
+                    <p class="text-muted" style="color: #636e72;">Browse through thousands of filtered job posts and apply with a single click.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="p-4 shadow-sm bg-white rounded-3 h-100">
+                    <i class="fas fa-handshake mb-3" style="font-size: 2.5rem; color: #54a0ff;"></i>
+                    <h4>Get Hired</h4>
+                    <p class="text-muted" style="color: #636e72;">Track your application status and connect directly with top recruiters.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="background-color: #2d3436; padding: 80px 0; color: white;">
+    <div class="container text-center">
+        <h2 class="mb-4 heading_font">Ready to start your journey?</h2>
+        <p class="mb-5" style="color: #bdc3c7; font-size: 1.1rem;">Join 5,000+ professionals who have already found their dream roles.</p>
+        <a th:href="@{/register}" class="btn-register py-3 px-5" style="display: inline-block; font-size: 1.2rem; text-decoration: none;">Get Started for Free</a>
+    </div>
+</div>
+
+<footer style="position: static;">
+    <div class="copy-right">
+        Copyright © 2026 CareerStream.com. All rights reserved.
+    </div>
+</footer>
+</body>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</html>

@@ -1,0 +1,761 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+* {
+  box-sizing: inherit;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+a:focus,
+.button:focus,
+button:focus {
+  text-decoration: none;
+  outline: none;
+}
+a:focus {
+  text-decoration: none;
+}
+#check:checked::before {
+  color: #54a0ff;
+  border-color: #54a0ff;
+}
+a:focus,
+a:hover {
+  text-decoration: none !important;
+}
+a {
+  text-decoration: none !important;
+}
+a.white {
+  color: white !important;
+}
+
+a.black {
+  color: black !important;
+}
+
+a.primary {
+  color: #002244 !important;
+}
+a.color-text,
+a.color-text:hover {
+  color: #54a0ff !important;
+}
+.background {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(45, 52, 54, 0.45), /* A charcoal tint */
+      rgba(45, 52, 54, 0.45)
+    ),
+    url(https://static.weblinkindia.net/images/job-portal-banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main_div {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.logo_left {
+  font-size: 1.4rem;
+  color: white;
+  margin-left: 30px;
+  margin-top: 1.8rem;
+}
+.logo_com {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 0.45rem;
+  color: white;
+  background-color: #54a0ff;
+}
+.logo_right {
+  padding-top: 1.8rem;
+  display: flex;
+  font-size: 1rem;
+  color: white;
+  margin-right: 50px;
+}
+.logo_right .btn-login {
+  padding: 10px 25px;
+  border-radius: 0.45rem;
+  border: 2px solid #54a0ff;
+  color: #54a0ff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.logo_right .btn-login:hover {
+  background-color: #54a0ff;
+  color: white !important;
+}
+.logo_right .btn-register {
+  padding: 10px 25px;
+  border-radius: 0.45rem;
+  background-color: #54a0ff;
+  color: white !important;
+  font-weight: 600;
+  border: 2px solid #54a0ff;
+  transition: all 0.3s ease;
+}
+.logo_right .btn-register:hover {
+  background-color: #4890e0;
+  border-color: #4890e0;
+  transform: translateY(-1px);
+}
+label > a {
+  text-decoration: none;
+  color: white;
+}
+label > a :hover {
+  text-decoration: none;
+  color: white;
+}
+.searchBox {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: 10%;
+  height: 60px;
+  width: 80%;
+}
+.inner {
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+}
+.inner input {
+  margin: 0px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 49%;
+  height: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-right: none;
+}
+.primary-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 49px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.radius-left {
+  border-radius: 10px 0 0 10px;
+}
+.radius-right {
+  border-radius: 0px 10px 10px 0px;
+}
+.inner input:focus {
+  outline: none;
+}
+.inner button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.inner button > i {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+  background-color: #54a0ff;
+  color: white;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+.copy-right {
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin: 0;
+  display: block;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #2d3436; /* Your charcoal color */
+  z-index: 1000;
+  padding: 15px 0;
+}
+/* Navbar */
+header.navbar {
+  height: 80px;
+  background-color: #2d3436;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+header .navbar-nav {
+  padding: 9px;
+}
+header.navbar > label {
+  margin-left: 3%;
+}
+label.nav-item {
+  color: white;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 0;
+}
+ul.navbar-nav li.nav-item a {
+  color: white !important;
+}
+ul.navbar-nav li.nav-item.active a {
+  color: #54a0ff !important;
+}
+.navbar button.myBtn-light {
+  margin: 0 1.25rem;
+}
+a.nav-link > i {
+  margin-right: 8px;
+  margin-left: 15px;
+}
+
+section.section {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: calc(100% - 80px);
+}
+
+.sidenav {
+  overflow: auto;
+  background-color: #002244;
+  padding-top: 20px;
+  color: white;
+  width: 300px;
+  flex: 0 0 auto;
+}
+label.color-dull {
+  color: #365a7e;
+}
+
+div.sidenav form .form-check {
+  margin: 5px;
+  font-weight: 300;
+}
+
+article {
+  padding: 10px;
+  background-color: #f5f5f5;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+div.box {
+  border-radius: 12px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+.box .job-row:hover {
+  transition: all 100ms ease-in-out;
+  transform: scale(1.01);
+  opacity: 1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+label.large-label {
+  font-style: medium;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+  color: black;
+}
+.job-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #002244;
+}
+.job-row {
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  align-items: center;
+  padding: 8px;
+  margin: 20px 10px;
+}
+.job-row div label {
+  display: block;
+  margin: 0;
+  padding: 5px;
+}
+
+.form-group select.form-control {
+  height: 54px !important;
+}
+
+/*          login           */
+.hidden-overflow {
+  overflow: hidden;
+}
+.coffee_mug_background {
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(
+      to right,
+      /*rgba(0, 34, 68, 0.5),*/
+      /*rgba(0, 34, 68, 0.5)*/
+      rgba(84, 160, 255, 0.3), /* Brighter Sky Blue with lower opacity */
+      rgba(84, 160, 255, 0.3)
+
+    ),
+    url('https://img.freepik.com/free-vector/man-search-hiring-job-online-from-laptop_1150-52728.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: left 68% center;
+  background-position: 65% 2%;
+}
+
+.myForm {
+  display: flex;
+  padding: 20px 0;
+  overflow-y: auto;
+  justify-content: center;
+}
+.myForm > form {
+  width: 80%;
+  height: 50%;
+}
+.myForm > form input {
+  padding: 15px 10px;
+  margin: 4px 0;
+  line-height: 140%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.basic_select {
+  padding: 15px 10px;
+  line-height: 140%;
+}
+.job_Spec_box {
+  padding: 5px;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.top-margin {
+  margin-top: 25%;
+}
+
+.heading_font {
+  font-family: 'Montserrat';
+}
+.font_sub_heading_color {
+  color: #002244;
+  text-transform: uppercase;
+}
+.base_button {
+  background-color: #54a0ff;
+  border: none;
+}
+
+#check:checked::before {
+  color: #54a0ff;
+  border: #54a0ff;
+}
+
+.myBtn {
+  background-color: #54a0ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 100%;
+  padding: 2%;
+  font-weight: bolder;
+  font-size: large;
+  height: 100%;
+}
+.myBtn-light {
+  box-sizing: border-box;
+  background-color: #54a0ff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 10px;
+  display: inline;
+  font-weight: bold;
+}
+a.color-text,
+a.color-text:hover {
+  color: #54a0ff;
+}
+
+.btn-sec {
+  display: inline-block;
+  padding: 13px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  text-align: center;
+  color: #fff !important;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  text-transform: capitalize;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btn-sec.btn-red {
+  background: #54a0ff;
+}
+.btn-sec.btn-black {
+  background: #191d34;
+}
+span.title-span {
+  font-size: 14px;
+  font-weight: 400;
+}
+div.centerCandidate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.candidatesApplied {
+  font-family: 'Montserrat';
+  font-style: normal;
+  padding: 15px;
+  background-color: #002244;
+  color: white;
+  border-radius: 10px;
+  line-height: 0.75;
+}
+.candidatesApplied > label {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+mr-1 {
+  margin-right: 0.25rem;
+}
+mr-2 {
+  margin-right: 0.5rem;
+}
+mr-3 {
+  margin-right: 0.75rem;
+}
+mr-4 {
+  margin-right: 1rem;
+}
+mr-5 {
+  margin-right: 1.25rem;
+}
+
+/* Progress Tracker Styling */
+.stepper-wrapper {
+  display: flex;
+  justify-content:间;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+.stepper-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.stepper-item::before {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: -50%;
+  z-index: 2;
+}
+.stepper-item::after {
+  position: absolute;
+  content: "";
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+  top: 20px;
+  left: 50%;
+  z-index: 2;
+}
+.stepper-item .step-counter {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-bottom: 6px;
+  color: white;
+  font-weight: bold;
+}
+.myBtn:hover, .btn-sec.btn-red:hover, .myBtn-light:hover {
+  background-color: #4890e0 !important; /* Slightly darker blue on hover */
+  transform: translateY(-1px);
+}
+.stepper-item.completed .step-counter { background-color: #28a745; }
+.stepper-item.active .step-counter { background-color: #17a2b8; }
+.stepper-item.completed::after { border-bottom: 2px solid #28a745; }
+.stepper-item:first-child::before { content: none; }
+.stepper-item:last-child::after { content: none; }
+.step-name {
+  font-size: 13px;
+  color: #bdc3c7; /* Light grey for pending steps */
+  font-weight: 600;
+  margin-top: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.completed .step-name {
+  color: #28a745; /* Green for finished steps */
+}
+.active .step-name {
+  color: #17a2b8; /* Blue for the current step */
+}
+.application-journey .step-container.rejected {
+  background-color: transparent !important; /* Removes that big red block */
+}
+/* Update the Rejected State style */
+.step.rejected .circle {
+  background-color: #ff7675; /* Professional Red */
+  border: 2px solid #ff7675;
+  color: white; /* Color of the 'X' */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step.rejected .label {
+  color: #ff7675;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* Change the progress line color leading to rejection */
+.progress-line.to-rejected {
+  background-color: #ff7675;
+}
+/* Targets Bootstrap Pagination if you are using it */
+.page-item.active .page-link {
+  background-color: #54a0ff !important;
+  border-color: #54a0ff !important;
+  color: white !important;
+}
+
+.page-link {
+  color: #54a0ff !important;
+}
+
+/* Targets custom "Next" or "Previous" buttons */
+.pagination-btn, .btn-pagination, .next-btn, .prev-btn {
+  background-color: #54a0ff !important;
+  color: white !important;
+  border: none !important;
+}
+/* Force hover states to stay blue/darker blue */
+.page-link:hover, .pagination-btn:hover {
+  background-color: #4890e0 !important;
+  color: white !important;
+}
+
+/* Fix for the "Back to Search Results" link or similar navigation anchors */
+#back-link, .primary {
+  color: #54a0ff !important;
+}
+
+/* Ensure this is at the bottom of your styles.css */
+.nav-toggle { display: none; }
+.nav-toggle-label { display: none; }
+
+@media screen and (max-width: 768px) {
+  /* Target both the index nav and the dashboard navs */
+  .main_div, header.navbar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-toggle-label {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 25px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .nav-toggle-label span::before { content: ''; position: absolute; bottom: 7px; }
+  .nav-toggle-label span::after { content: ''; position: absolute; top: 7px; }
+
+  /* Turn hamburger into an X when menu is open */
+  .nav-toggle:checked ~ .nav-toggle-label span { background: transparent; }
+  .nav-toggle:checked ~ .nav-toggle-label span::before { transform: rotate(45deg); bottom: 0; }
+  .nav-toggle:checked ~ .nav-toggle-label span::after { transform: rotate(-45deg); top: 0; }
+
+  /* Hide the menu container on mobile */
+  .logo_right, .logo_right_dashboard, #navbarToggler {
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+    background-color: #2d3436;
+    padding: 15px;
+  }
+
+  /* THE TRIGGER: Show the menu when checked */
+  .nav-toggle:checked ~ .logo_right,
+  .nav-toggle:checked ~ .logo_right_dashboard,
+  .nav-toggle:checked ~ #navbarToggler {
+    display: flex !important;
+  }
+  
+  .logo_right .btn-login, .logo_right .btn-register {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  /* Ensure navbar links stack vertically in the dropdown */
+  #navbarToggler .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* Fix inner search bar overflowing horizontally on mobile */
+  .inner {
+    flex-direction: column;
+  }
+  .inner input {
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  .inner button {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .inner button > i {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  /* Make the Dashboard responsive (Sidebar stacks on top) */
+  section.section {
+    flex-direction: column;
+    height: auto;
+    min-height: calc(100vh - 80px);
+  }
+  
+  .sidenav {
+    width: 100%;
+    flex: none;
+    padding-bottom: 30px;
+    height: auto;
+  }
+  
+  article {
+    width: 100%;
+    overflow-y: visible;
+  }
+}
+
+/* Custom Pagination Styling - Pure CSS */
+.custom-pagination {
+    margin: 40px 0;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-btn, .page-link-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.page-btn:hover:not(.disabled-btn), .page-link-custom:hover {
+    background: #54a0ff;
+    border-color: #54a0ff;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.active-link {
+    background: #54a0ff !important;
+    border-color: #54a0ff !important;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.3);
+    color: white !important;
+}
+
+.disabled-btn {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.pagination-info {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #bdc3c7;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 8px;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/font-awesome.min.css}"/>
+    <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/styles.css}"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Choose Role | CareerStream</title>
+
+    <style>
+        /* Ensures smooth stacking on mobile devices */
+        @media (max-width: 991px) {
+            .coffee_mug_background {
+                height: 35vh !important; /* Smaller image height when at the top */
+                background-position: center !important;
+            }
+            .top-margin {
+                margin-top: 30px !important;
+                padding-bottom: 50px;
+            }
+            .logo_left {
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+                text-align: center;
+                width: 100%;
+            }
+            .ms-5 { margin-left: 0 !important; }
+        }
+
+        /* Ensures background covers full height on desktop */
+        .coffee_mug_background {
+            height: 100vh;
+            background-size: cover;
+        }
+
+        body, html {
+            overflow-x: hidden;
+        }
+        
+        .role-btn {
+            padding: 20px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: auto;
+        }
+        
+        .role-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+
+<body>
+<section class="content hidden-overflow">
+    <div class="row g-0">
+
+        <div class="col-lg-6 col-md-12 coffee_mug_background">
+            <div class="logo_left mt-3 pt-4 ms-5 pl-5">
+                <h2 class="logo" style="color: white">
+                    Career Stream <span class="logo_com">.com</span>
+                </h2>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12 bg-white d-flex align-items-center justify-content-center p-4">
+            <div class="w-100" style="max-width: 500px;">
+                <div class="text-center mb-5 mt-md-0 mt-5">
+                    <h1 class="heading_font font-weight-bold mb-3" style="color: #002244;">
+                        Welcome to Career Stream!
+                    </h1>
+                    <p class="text-muted fs-5">Since this is your first time logging in with Google, please tell us who you are:</p>
+                </div>
+                
+                <div class="row g-4 mt-2">
+                    <div class="col-md-12">
+                        <a th:href="@{/register/social/save(role='Job Seeker')}" class="btn myBtn role-btn w-100 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-user-tie me-3 fs-3"></i> 
+                            <span>I am a Job Seeker</span>
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <a th:href="@{/register/social/save(role='Recruiter')}" class="btn btn-dark role-btn w-100 d-flex align-items-center justify-content-center" style="background-color: #002244; border: none;">
+                            <i class="fas fa-building me-3 fs-3"></i> 
+                            <span>I am a Recruiter</span>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
